@@ -80,7 +80,6 @@ data_source = st.sidebar.radio("Choose data source", ("CSV", "Yahoo Finance"))
 
 # Fetch exchange rate
 usd_to_inr_rate = get_usd_to_inr_rate()
-st.sidebar.markdown(f"<p class='small-font'>Current Exchange Rate: 1 USD = {usd_to_inr_rate:.2f} INR</p>", unsafe_allow_html=True)
 
 # Main content
 col1, col2 = st.columns([2, 1])
