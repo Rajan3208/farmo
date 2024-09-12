@@ -10,7 +10,7 @@ import requests
 # Set page config
 st.set_page_config(page_title="PRICE_PREDICTOR_AI_MODEL", layout="wide")
 
-# Custom CSS (unchanged)
+# Custom CSS
 st.markdown("""
 <style>
     .reportview-container {
@@ -47,8 +47,8 @@ def get_usd_to_inr_rate():
 
 # Function to load CSV data
 @st.cache_data  # This decorator will cache the data to improve performance
-def load_csv_data(agriculture_prices.csv):
-    return pd.read_csv(agriculture_prices.csv)
+def load_csv_data(filename):
+    return pd.read_csv(filename)
 
 # Function to fetch data from Yahoo Finance
 @st.cache_data(ttl=3600)  # Cache for 1 hour
