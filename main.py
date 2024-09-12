@@ -76,7 +76,7 @@ st.markdown('<p class="big-font">Agricultural Product Price Predictor</p>', unsa
 # Sidebar
 st.sidebar.markdown('<p class="medium-font">Settings</p>', unsafe_allow_html=True)
 selected_product = st.sidebar.selectbox('Select a product', list(products.keys()))
-data_source = st.sidebar.radio("Choose data source", ("CSV", "Yahoo Finance"))
+data_source = st.sidebar.radio("Choose data source", ("Yahoo Finance", "CSV"), index=0)  # Set Yahoo Finance as default
 
 # Fetch exchange rate
 usd_to_inr_rate = get_usd_to_inr_rate()
