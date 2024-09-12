@@ -101,7 +101,7 @@ with col1:
         start_date = (datetime.now() - timedelta(days=180)).strftime('%Y-%m-%d')  # 6 months of historical data
         df = fetch_yahoo_finance_data(products[selected_product]['ticker'], start_date, end_date)
         df.columns = ['Date', 'Price']  # Rename columns
-        st.success(f"Data for {selected_product} fetched successfully!")
+        st.success(f"Future price data for {selected_product} fetched successfully!")
 
     # Check if data is empty
     if df.empty:
