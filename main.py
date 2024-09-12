@@ -78,6 +78,9 @@ st.sidebar.markdown('<p class="medium-font">Settings</p>', unsafe_allow_html=Tru
 selected_product = st.sidebar.selectbox('Select a product', list(products.keys()))
 data_source = st.sidebar.radio("Choose data source", ("CSV", "Yahoo Finance"))
 
+# Fetch exchange rate
+usd_to_inr_rate = get_usd_to_inr_rate()
+st.sidebar.markdown(f"<p class='small-font'>Current Exchange Rate: 1 USD = {usd_to_inr_rate:.2f} INR</p>", unsafe_allow_html=True)
 
 # Main content
 col1, col2 = st.columns([2, 1])
