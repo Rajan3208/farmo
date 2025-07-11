@@ -24,7 +24,7 @@ farmo is a Jupyter Notebook repository that aims to provide a comprehensive tool
 ## Installation:
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/farmo.git
+   git clone https://github.com/rajan3208/farmo.git
    ```
 2. Install the necessary libraries:
    ```
